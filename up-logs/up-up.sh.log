@@ -1,0 +1,2 @@
+21-01-11 11:38:33 ; up.sh ; -------------------------
+21-01-11 11:39:56 ; up.sh ; -u /home/runar/bin/up/up.py --route_dir=/home/runar/bin/up --route_port=8100 --environment=win

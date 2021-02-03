@@ -1,0 +1,9 @@
+2021-01-11 11:38:34.929752 camera b'Starting on port:54841\n'
+2021-01-11 11:38:34.929911 camera b'----------- win_service_camera.py starting on port: 54841\n'
+2021-01-11 11:38:34.929962 camera b'Starting on port:54841\n'
+2021-01-11 11:39:44.511011 camera b"{'config': {'contrast': 40, 'brightness': 60, 'meter': 'average', 'exposure': 'night', 'flash': 'off', 'awb': 'auto', 'imageEffects': 'none', 'drcStrengths': 'off', 'rawFormats': 'rgb', 'stereo': 'none', 'clock': 'clock'}, 'image': {'height': 768, 'width': 1024, 'rotation': 90, 'date': '2021-01-11_11:39:44'}}\n"
+2021-01-11 11:39:44.511105 camera b'Entered\n'
+2021-01-11 11:39:44.511137 camera b'Exited\n'
+2021-01-11 11:39:57.057436 camera b'Starting on port:54872\n'
+2021-01-11 11:39:57.057674 camera b'----------- win_service_camera.py starting on port: 54872\n'
+2021-01-11 11:39:57.059491 camera b'Starting on port:54872\n'

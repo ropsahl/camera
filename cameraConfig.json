@@ -1,0 +1,20 @@
+{
+  "config": {
+    "contrast": 40,
+    "brightness": 60,
+    "meter": "average",
+    "exposure": "night",
+    "flash": "off",
+    "awb": "auto",
+    "imageEffects": "none",
+    "drcStrengths": "off",
+    "rawFormats": "rgb",
+    "stereo": "none",
+    "clock": "clock"
+  },
+  "image": {
+    "height": 768,
+    "width": 1024,
+    "rotation": 90
+  }
+}

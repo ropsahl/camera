@@ -1,0 +1,50 @@
+GET localhost:8100/static/testing.http
+
+###
+GET {{host}}
+
+###
+GET {{host}}/config/exposure
+###
+GET {{host}}/config/keys
+###
+GET {{host}}/config/drcStrengths
+
+###
+POST {{host}}/camera
+Content-Type: application/json
+
+{
+  "config": {
+    "contrast": 40,
+    "brightness": 60,
+    "effects": "none",
+    "exposure": "night"
+  },
+  "image": {
+      "height": 768,
+      "width": 1024,
+    "rotation": 90
+  }
+}
+
+###
+POST localhost:8210/snap
+Content-Type: application/json
+
+{
+  "config": {
+    "contrast": 40,
+    "brightness": 60,
+    "effects": "none",
+    "exposure": "night"
+  },
+  "image": {
+    "height": 768,
+    "width": 1024,
+    "rotation": 90
+  }
+}
+
+###
+

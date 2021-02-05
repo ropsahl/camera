@@ -165,6 +165,11 @@ def send_static(filename):
     return static_file(filename, root='C:/Users/runar/projects/pi/camera')
 
 
+@get('/config/current')
+def get_current_config():
+    return merge({})
+
+
 @post('/camera')
 def configure():
     print('/camera')

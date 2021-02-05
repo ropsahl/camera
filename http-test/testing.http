@@ -6,6 +6,9 @@ GET {{host}}
 ###
 GET {{host}}/config/exposure
 ###
+GET {{host}}/config/current
+
+###
 GET {{host}}/config/keys
 ###
 GET {{host}}/config/drcStrengths

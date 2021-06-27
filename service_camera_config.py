@@ -6,7 +6,7 @@ import requests
 import sys
 from builtins import print
 
-from lib.bottle import static_file, route, run, get, post, request
+from lib.bottle import static_file, route, run, get, post, request, error
 from utilities import port, router_host
 
 print("Running on " + os.name)
@@ -206,5 +206,15 @@ def camera_url():
         return router + '/camera/snap'
     return 'http://localhost:8210/snap'
 
+@error(404)
+def err_404(error):
+    print(error)
+    return 'Sorry ' + str(error)
+
+
+@error(500)
+def err_500(error):
+    print(error)
+    return 'Sorry ' + str(error)
 
 run(host='localhost', port=port(sys.argv[0], 8200), debug=True)

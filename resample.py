@@ -1,33 +1,20 @@
-import glob
-import os
-
-import numpy as np
 from PIL import Image
 
 baseHeight = 80
 windowSize = 12
 windowSumLimit = windowSize * 30
 windowDiffLimit = 2000
-
+'./importedPictures\\utsikt_2021-02-07_135452.jpg'
 prev_all_pix = []
-for file in glob.glob("./importedPictures/*.jpg"):
-    img = Image.open(file)
-    hpercent = (baseHeight / float(img.size[1]))
-    wsize = int((float(img.size[0]) * float(hpercent)))
-    img = img.resize((wsize, baseHeight), Image.ANTIALIAS)
-    allPix = [x for sets in list(img.getdata())
-              for x in sets]
-    npa = np.array(allPix)
-    pixDiff = 0
-    if len(prev_all_pix) > 0:
-        for i in range(windowSize, len(allPix)):
-            if abs(np.sum(npa[i - windowSize:i]) - np.sum(prev_all_pix[i - windowSize:i])) > windowSumLimit:
-                pixDiff += 1
-    if pixDiff > windowDiffLimit:
-        img.save(
-            os.path.join(os.path.dirname(file), "resampled",
-                         os.path.splitext(os.path.basename(file))[0] + "_" + str(pixDiff) + ".jpg"))
-    prev_all_pix = npa
+img = Image.open(".\\importedPictures\\utsikt_2021-07-15_153906.jpg")
+w, h = img.size
+left = w / 6
+top = 2*h / 6
+right = 4 * w / 6
+bottom = 3.8 * h / 6
+cropped = img.crop((left, top, right, bottom))
+img.close()
+cropped.save(".\\importedPictures\\cropped.jpg")
 
 
 def manipuler():

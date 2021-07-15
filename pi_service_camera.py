@@ -29,7 +29,7 @@ def snap():
                 camera.brightness = config['config']['brightness']
             if 'exposure' in config['config']:
                 camera.exposure_mode = config['config']['exposure']
-        date_now = datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
+        date_now = datetime.datetime.now().strftime("%Y-%m-%d_%H%M%S")
         camera.annotate_text = date_now
         file_name = 'utsikt_' + date_now + '.jpg'
         sleep(2)

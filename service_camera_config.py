@@ -131,8 +131,10 @@ configProperties = {
 
 
 @route('/hello')
+@route('/live')
 @route('/')
 def hello():
+    print("/ or /live or /hello")
     return "<html><body>" \
            "<h1>Config server</h1><p>My endpoints are:</p>" \
            "<a href='/camera_config/config'>Test endpoint: GET /camera_config/config </a>" \

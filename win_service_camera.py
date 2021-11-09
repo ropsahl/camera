@@ -2,7 +2,7 @@ import datetime
 
 import sys
 
-from lib.bottle import run, post, error, request
+from lib.bottle import run, post, error, request, route
 from utilities import port
 
 
@@ -16,6 +16,10 @@ class PiCamera():
 
     def __exit__(self, exception_type, exception_value, traceback):
         print('Exited')
+
+@route('/live')
+def live():
+    return "live and kicking"
 
 
 @post('/snap')

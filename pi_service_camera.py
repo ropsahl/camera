@@ -6,8 +6,14 @@ import sys
 from picamera import PiCamera, Color
 from time import sleep
 
-from lib.bottle import run, post, error, request
+from lib.bottle import run, post, error, request, route
 from utilities import port
+
+
+@route('/live')
+def live():
+    print("/live")
+    return "live and kicking"
 
 
 @post('/snap')
